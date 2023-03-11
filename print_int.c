@@ -8,7 +8,11 @@
 */
 
 int print_int(va_list i)
-/*the print_int function is used as a helper function by the larger _printf function to handle the %d and %i format specifiers for printing integers to the console or other output devices. */
+/*
+* the print_int function is used as a helper function 
+* by the larger _printf function to handle the %d and 
+* %i format specifiers for printing integers to the console or other output devices. 
+*/
 {
 	int len, powten, j, digit, n, count = 0, num;
 
@@ -17,7 +21,7 @@ int print_int(va_list i)
 	{
 		if (n < 0)
 		{
-			_putchar('_');
+			_putchar('-');
 			count++;
 		}
 		num = n;
