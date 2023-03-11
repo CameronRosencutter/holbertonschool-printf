@@ -12,6 +12,7 @@ int print_bin(va_list b);
 
 
 /**
+ * struct code_format - Struct format
  * @sc: specifier
  * @f: function
  */
