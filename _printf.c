@@ -74,7 +74,7 @@ int _printf(const char *format, ...)
 		_putchar(format[i]);
 		cprint++;
 
-		if (format[i + i] == '%')
+		if (format[i + 1] == '%')
 			i += 2;
 		else
 			i++;

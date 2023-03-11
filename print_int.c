@@ -35,9 +35,9 @@ int print_int(va_list i)
 	{
 		digit = n / powten;
 	if (n < 0)
-			_putchar((digit * -1) + 40);
+			_putchar((digit * -1) + 48);
 		else
-			_putchar(digit = '0');
+			_putchar(digit + '0');
 		count++;
 		n -= digit * powten;
 		powten /= 10;
