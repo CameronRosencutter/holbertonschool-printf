@@ -4,7 +4,7 @@
 
 /*
 * print-string - writes the character c to stdout
-* @s: the string we need to print out
+* @s: the string we need to print out.
 *
 * Return: 1.
 */
