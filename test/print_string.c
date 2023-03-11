@@ -13,7 +13,7 @@ int print_string(va_list s)
 /* the print_string function is used as a helper function by the larger _printf function to handle the %s format specifier for printing strings to the console or other output devices. */
 {
 	char *string;
-	int 1 = 0;
+	int i = 0;
 
 	string = va_arg(s, char *);
 	if (string == NULL)

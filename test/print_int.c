@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 
 /**
 * print_int - this is a function that prints out an integer
@@ -7,10 +7,10 @@ nclude "main.h"
 * Return: this returns the size of the text that will be output
 */
 
-int print_int(va_list 1)
+int print_int(va_list i)
 /*the print_int function is used as a helper function by the larger _printf function to handle the %d and %i format specifiers for printing integers to the console or other output devices. */
 {
-	int let, powten, j, digit, n, count = 0, num;
+	int len, powten, j, digit, n, count = 0, num;
 
 	n = va_arg(i, int);
 	if (n !=0)

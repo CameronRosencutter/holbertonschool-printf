@@ -1,5 +1,5 @@
 #include <stdarg.h>
-#include <unisted.h>
+#include <unistd.h>
 #include "main.h"
 
 /*
@@ -22,7 +22,7 @@ int (*find_function(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-		while (findf[i].sc)
+		while (find_f[i].sc)
 		{
 			if (find_f[i].sc[0] == (*format))
 				return (find_f[i].f);
@@ -37,7 +37,7 @@ int (*find_function(const char *format))(va_list)
 * Return: the size that the text will be output
 */
 
-int _printf(const char *format, ....)
+int _printf(const char *format, ...)
 /*the _printf function is used to print formatted output to the console or other output devices in a flexible and extensible manner, allowing for a variety of formatting options and output formats. */
 {
 	va_list ap;
@@ -55,7 +55,7 @@ int _printf(const char *format, ....)
 		{
 			_putchar(format[i]);
 			cprint++;
-			i++
+			i++;
 		}
 
 		if (format[i] == '\0')
@@ -64,13 +64,13 @@ int _printf(const char *format, ....)
 
 		if (f != NULL)
 		{
-			cprint += f(ap)
+			cprint += f(ap);
 			i += 2;
 			continue;
 		}
 
 		if (!format[i + 1])
-			return (-1)
+			return (-1);
 		_putchar(format[i]);
 		cprint++;
 
