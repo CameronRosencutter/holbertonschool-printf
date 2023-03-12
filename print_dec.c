@@ -1,12 +1,10 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * print_dec - Prints Decimal
- * @d: printable
- * Description: prints digit with _putchar
- * Return: Size
- */
-
+* print_dec - function that prints an decimal
+* @d: integer to print
+* Descriptions: prints digit with _putchar
+* Return: size the output text
+*/
 int print_dec(va_list d)
 {
 	int len, powten, j, digit, n, count = 0, num;
@@ -44,7 +42,7 @@ int print_dec(va_list d)
 	else
 	{
 		_putchar('0');
-		return (0);
+		return (1);
 	}
-	return (1);
+	return (count);
 }
