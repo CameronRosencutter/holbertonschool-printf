@@ -8,7 +8,7 @@ int print_dec(va_list d);
 int _putchar(char c);
 int print_char(va_list c);
 int print_string(va_list s);
-int print_bin(va_list b);
+
 
 
 /**
