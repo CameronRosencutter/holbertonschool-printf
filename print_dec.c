@@ -3,6 +3,7 @@
 /**
  * print_dec - Prints Decimal
  * @d: printable
+ * Description: prints digit with _putchar
  * Return: Size
  */
 
