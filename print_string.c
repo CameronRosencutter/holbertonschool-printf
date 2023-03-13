@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /*
-* print-string - writes the character c to stdout
+* print_string - writes the character c to stdout
 * @s: the string we need to print out.
 *
 * Return: 1.
