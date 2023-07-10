@@ -1,70 +1,53 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdarg.h>
 #include "main.h"
 
 /**
- * check - Function
- * @format: Format Specifier predefined
- * Description: Checks Valid Format Specifier
- * Return: Pointer Valid or NULL
+ * _printf - recreation of printf to find certain specifiers
+ * Description: Funtion that prints string format.
+ *
+ * @format: arguments function
+ * Return: an int len of string to '\0'
  */
-int (*check(const char *format))(va_list)
-{
-	unsigned int i;
-print_t p[] = { {"c", print_c}, {"s", print_s}, {"p", print_p}, {"d", print_d},
-	{"i", print_i}, {NULL, NULL} };
 
-for (i = 0; p[i].t != NULL; i++)
-{
-if (*(p[i].t) == *format)
-	{
-	break;
-	}
-}
-return (p[i].f);
-}
-/**
- * _printf - Prints Anything
- * @format: List Argument Types Passed to Tunction
- * Descripction: Output Accord to Format
- * Return: Length Characters Printed
- */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, count = 0;
-	va_list lst;
-	int (*f)(va_list);
+	int i = 0, bf_count = 0;
+	char *buffer = NULL;
+	void (*category_functions)(char *, va_list, int *);
+	va_list args;
 
-	if (format == NULL)
+	va_start(args, format), buffer = malloc(sizeof(char) * 2048);
+	if (!format || !buffer || (format[i] == '%' && !format[i + 1]))
 		return (-1);
-
-	va_start(lst, format);
-	while (format[i])
+	if (!format[i])
+		return (0);
+	for (; format[i] != '\0'; i++)
 	{
-		for (; format[i] != '%' && format[i]; i++)
+		if (format[i] == '%')
 		{
-			_putchar(format[i]);
-			count++;
-		}
-		if (!format[i])
-			return (count);
-		f = check(&format[i + 1]);
-		if (f != NULL)
-		{
-			count += f(lst);
-			i += 2;
+			if (format[i + 1] == '\0')
+				continue;
+
+			category_functions = get_category_functions(format[i + 1]);
+			if (category_functions == NULL)
+			{
+				buffer[bf_count] = format[i];
+
+				if (format[i + 1] != '%')
+				{
+					buffer[bf_count + 1] = format[i + 1];
+					bf_count += 2;
+				}
+				else
+					bf_count++;
+			}
+			else
+				category_functions(buffer, args, &bf_count);
+			i++;
 			continue;
 		}
-		if (!format[i + 1])
-			return (-1);
-		_putchar(format[i]);
-		count++;
-		if (format[i + 1] == '%')
-			i += 2;
-		else
-			i++;
+		buffer[bf_count] = format[i];
+		bf_count++;
 	}
-	va_end(lst);
-	return (count);
+	va_end(args), write(1, buffer, bf_count), free(buffer);
+	return (bf_count);
 }
