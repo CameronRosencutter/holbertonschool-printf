@@ -31,5 +31,6 @@ int print_p(va_list p);
 int print_i(va_list i);
 int print_d(va_list d);
 int print_b(va_list b);
+int print_unsigned_int(unsigned int n);
 
 #endif /* MAIN_H */
