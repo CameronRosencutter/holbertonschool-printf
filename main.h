@@ -23,9 +23,13 @@ typedef struct print
 
 /* Prototypes */
 
-int print_char(va_list ap);
-int print_str(va_list ap);
-int print_int(va_list ap);
-int print_unsigned_int(unsigned int n);
+int _putchar(char c);
+int _printf(const char *format, ...);
+int print_c(va_list c);
+int print_s(va_list s);
+int print_p(va_list p);
+int print_i(va_list i);
+int print_d(va_list d);
+int print_b(va_list b);
 
 #endif /* MAIN_H */
