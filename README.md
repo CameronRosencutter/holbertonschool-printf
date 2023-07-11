@@ -14,3 +14,12 @@ of argument required to be paired with them.
 %i - A signed decimal integer - int
 
 %% - Prints a single character
+
+
+### Examples 
+
+Character: printf("%c", 'P'); Output:: P
+
+String: printf("%s", 'This is a string.'); Output: This is a string.
+
+Integer: printf("%i", 3); Output: 3
