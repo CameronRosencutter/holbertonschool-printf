@@ -18,11 +18,36 @@ of argument required to be paired with them.
 
 ### Examples 
 
-Character: printf("%c", 'P'); Output:: P
+**Character:**
 
-String: printf("%s", 'This is a string.'); Output: This is a string.
+Input: 
+'''
+printf("%c", 'P');
 
-Integer: printf("%i", 3); Output: 3
+Output:
+'''
+ P
+
+**String:**
+
+Input:
+'''
+printf("%s", "This is a string.");
+
+Output:
+'''
+This is a string.
+
+**Integer:**
+
+Input:
+'''
+printf("%i", 3);
+
+Output:
+'''
+3
+
 
 ## Requirements
 
