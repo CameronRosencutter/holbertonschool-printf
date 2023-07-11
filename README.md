@@ -21,32 +21,38 @@ of argument required to be paired with them.
 **Character:**
 
 Input: 
-'''
+```
 printf("%c", 'P');
+``````
 
 Output:
-'''
- P
+```
+P
+```
 
 **String:**
 
 Input:
-'''
+```
 printf("%s", "This is a string.");
+```
 
 Output:
-'''
+```
 This is a string.
+```
 
 **Integer:**
 
 Input:
-'''
+```
 printf("%i", 3);
+```
 
 Output:
-'''
+```
 3
+```
 
 
 ## Requirements
