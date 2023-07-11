@@ -47,3 +47,12 @@ General
 - [Ubuntu](https://ubuntu.com/)
 - [GitHub](https://github.com/)
 - [VIM](https://www.vim.org/)
+
+## Authors
+* [**Dominick Keeling**](https://github.com/dominickkeeling)
+* [**Cameron Rosencutter**](https://github.com/CameronRosencutter)
+* [**Kortlan Blocker**](https://github.com/Muncherxyz)
+
+## License
+
+This project is licensed under the Holberton School Software Engineering Program.
